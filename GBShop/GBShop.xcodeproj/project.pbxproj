@@ -99,13 +99,11 @@
 		15FE6896258E09ED0082FB3B /* GBShop */ = {
 			isa = PBXGroup;
 			children = (
+				15FE68C7258E0BBF0082FB3B /* App */,
 				15FE6897258E09ED0082FB3B /* AppDelegate.swift */,
-				15FE6899258E09ED0082FB3B /* SceneDelegate.swift */,
-				15FE689B258E09ED0082FB3B /* ViewController.swift */,
-				15FE689D258E09ED0082FB3B /* Main.storyboard */,
-				15FE68A0258E09F30082FB3B /* Assets.xcassets */,
-				15FE68A2258E09F30082FB3B /* LaunchScreen.storyboard */,
-				15FE68A5258E09F30082FB3B /* Info.plist */,
+				15FE68CE258E0C8D0082FB3B /* Core */,
+				15FE68CF258E0CAD0082FB3B /* Resources */,
+				15FE68D0258E0CEC0082FB3B /* Environments */,
 			);
 			path = GBShop;
 			sourceTree = "<group>";
@@ -126,6 +124,72 @@
 				15FE68BB258E09F40082FB3B /* Info.plist */,
 			);
 			path = GBShopUITests;
+			sourceTree = "<group>";
+		};
+		15FE68C7258E0BBF0082FB3B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				15FE68CC258E0C2E0082FB3B /* Flows */,
+				15FE68CA258E0C0E0082FB3B /* Assembly */,
+				15FE68C9258E0BF50082FB3B /* Entity */,
+				15FE68C8258E0BE00082FB3B /* BusinessLogic */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		15FE68C8258E0BE00082FB3B /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		15FE68C9258E0BF50082FB3B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		15FE68CA258E0C0E0082FB3B /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		15FE68CC258E0C2E0082FB3B /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		15FE68CE258E0C8D0082FB3B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		15FE68CF258E0CAD0082FB3B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15FE689B258E09ED0082FB3B /* ViewController.swift */,
+				15FE689D258E09ED0082FB3B /* Main.storyboard */,
+				15FE68A0258E09F30082FB3B /* Assets.xcassets */,
+				15FE68A2258E09F30082FB3B /* LaunchScreen.storyboard */,
+				15FE68A5258E09F30082FB3B /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15FE68D0258E0CEC0082FB3B /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				15FE6899258E09ED0082FB3B /* SceneDelegate.swift */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMFAG46DC2;
-				INFOPLIST_FILE = GBShop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GBShop/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMFAG46DC2;
-				INFOPLIST_FILE = GBShop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GBShop/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
