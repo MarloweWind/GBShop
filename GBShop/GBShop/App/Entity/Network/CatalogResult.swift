@@ -1,5 +1,5 @@
 //
-//  Product.swift
+//  Catalog.swift
 //  GBShop
 //
 //  Created by Алексей Мальков on 25.12.2020.
@@ -8,16 +8,17 @@
 
 import Foundation
 
-struct Product: Codable {
-    let result: Int
+typealias CatalogArrayResult = [CatalogResult]
+
+struct CatalogResult: Codable {
+    let productId: Int
     let productName: String
     let productPrice: Int
-    let productDescription: String
     
     enum CodingKeys: String, CodingKey {
+        case productId = "id_product"
         case productName = "product_name"
-        case productPrice = "product_price"
-        case productDescription = "product_description"
-        case result = "result"
+        case productPrice = "price"
     }
+    
 }

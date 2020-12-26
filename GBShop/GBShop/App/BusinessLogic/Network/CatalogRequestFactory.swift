@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol CatalogRequestFactory: AbstractRequestFactory {
-    func doCatalogList(completionHandler: @escaping (DataResponse<Catalog>) -> Void)
-    func doProduct(completionHandler: @escaping (DataResponse<Product>) -> Void)
+    func doCatalogList(completionHandler: @escaping (DataResponse<CatalogArrayResult>) -> Void)
+    func doProduct(completionHandler: @escaping (DataResponse<ProductResult>) -> Void)
 }
 

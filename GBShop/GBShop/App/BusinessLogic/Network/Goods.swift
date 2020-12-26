@@ -45,12 +45,12 @@ extension Goods{
 
 extension Goods: CatalogRequestFactory{
     
-    func doCatalogList(completionHandler: @escaping (DataResponse<Catalog>) -> Void) {
+    func doCatalogList(completionHandler: @escaping (DataResponse<CatalogArrayResult>) -> Void) {
         let requestModel = goodsData(baseUrl: baseUrl)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func doProduct(completionHandler: @escaping (DataResponse<Product>) -> Void) {
+    func doProduct(completionHandler: @escaping (DataResponse<ProductResult>) -> Void) {
         let requestModel = goodsById(baseUrl: baseUrl)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
