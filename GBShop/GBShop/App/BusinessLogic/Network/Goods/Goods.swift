@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import  Alamofire
+import Alamofire
 
 class Goods: AbstractRequestFactory{
     
@@ -45,7 +45,7 @@ extension Goods{
 
 extension Goods: CatalogRequestFactory{
     
-    func doCatalogList(completionHandler: @escaping (DataResponse<CatalogArrayResult>) -> Void) {
+    func doCatalogList(completionHandler: @escaping (DataResponse<CatalogArray>) -> Void) {
         let requestModel = goodsData(baseUrl: baseUrl)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
