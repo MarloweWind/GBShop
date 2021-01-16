@@ -106,6 +106,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let basket = requestFactory.makeBasketFactory()
+        
+        basket.getBasketBy(sessionId: 123) { response in
+            print("Basket")
+            
+            switch response.result {
+            case .success(let basketResult):
+                print(basketResult)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        basket.addProductToBasketBy(productId: 123, sessionId: 123, quantity: 2) { response in
+            print("Add to basket")
+            
+            switch response.result {
+            case .success(let addToBasketResult):
+                print(addToBasketResult)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        basket.removeProductFromBasketBy(productId: 123, sessionId: 123) { response in
+            print("Remove from basket")
+
+            switch response.result {
+            case .success(let removeFromBasketResult):
+                print(removeFromBasketResult)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        basket.payOrderBy(sessionId: 123, paySumm: 2000) { response in
+            print("Pay basket")
+            
+            switch response.result {
+            case .success(let payBasketResult):
+                print(payBasketResult)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
         return true
     }
 
