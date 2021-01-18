@@ -19,6 +19,11 @@
 		1507D88525B59923008DD271 /* AuthRequestStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D88425B59923008DD271 /* AuthRequestStruct.swift */; };
 		1507D88725B5993F008DD271 /* RegisterRequestStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D88625B5993F008DD271 /* RegisterRequestStruct.swift */; };
 		1507D88925B59954008DD271 /* ChangeUserDataRequestStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D88825B59954008DD271 /* ChangeUserDataRequestStruct.swift */; };
+		1507D89025B59CE9008DD271 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D88F25B59CE9008DD271 /* LoginViewController.swift */; };
+		1507D89225B59E20008DD271 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D89125B59E20008DD271 /* LoginView.swift */; };
+		1507D89525B5BCF5008DD271 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D89425B5BCF5008DD271 /* RegisterViewController.swift */; };
+		1507D89725B5BD10008DD271 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D89625B5BD10008DD271 /* RegisterView.swift */; };
+		1507D89A25B5C44D008DD271 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D89925B5C44D008DD271 /* CatalogViewController.swift */; };
 		151359A02597359000E0CB81 /* GoodsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513599F2597358F00E0CB81 /* GoodsTest.swift */; };
 		151359A22597387A00E0CB81 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151359A12597387A00E0CB81 /* LoginTest.swift */; };
 		1574C92A25B07781001A210B /* AddToBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574C92925B07781001A210B /* AddToBasketResult.swift */; };
@@ -90,6 +95,11 @@
 		1507D88425B59923008DD271 /* AuthRequestStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestStruct.swift; sourceTree = "<group>"; };
 		1507D88625B5993F008DD271 /* RegisterRequestStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestStruct.swift; sourceTree = "<group>"; };
 		1507D88825B59954008DD271 /* ChangeUserDataRequestStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataRequestStruct.swift; sourceTree = "<group>"; };
+		1507D88F25B59CE9008DD271 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1507D89125B59E20008DD271 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1507D89425B5BCF5008DD271 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1507D89625B5BD10008DD271 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		1507D89925B5C44D008DD271 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		1513599F2597358F00E0CB81 /* GoodsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTest.swift; sourceTree = "<group>"; };
 		151359A12597387A00E0CB81 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
 		1574C92925B07781001A210B /* AddToBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketResult.swift; sourceTree = "<group>"; };
@@ -260,6 +270,42 @@
 			path = ChangeUserData;
 			sourceTree = "<group>";
 		};
+		1507D88D25B59CAE008DD271 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1507D89825B5C351008DD271 /* Catalog */,
+				1507D89325B5BCD1008DD271 /* Register */,
+				1507D88E25B59CBB008DD271 /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1507D88E25B59CBB008DD271 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1507D89125B59E20008DD271 /* LoginView.swift */,
+				1507D88F25B59CE9008DD271 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1507D89325B5BCD1008DD271 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				1507D89625B5BD10008DD271 /* RegisterView.swift */,
+				1507D89425B5BCF5008DD271 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		1507D89825B5C351008DD271 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				1507D89925B5C44D008DD271 /* CatalogViewController.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
 		1558CFCD25935BC900A02D34 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,8 +419,8 @@
 		15FE68C7258E0BBF0082FB3B /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1507D88D25B59CAE008DD271 /* Controllers */,
 				15FE68CC258E0C2E0082FB3B /* Flows */,
-				15FE68CA258E0C0E0082FB3B /* Assembly */,
 				15FE68C9258E0BF50082FB3B /* Entity */,
 				15FE68C8258E0BE00082FB3B /* BusinessLogic */,
 			);
@@ -395,13 +441,6 @@
 				1558CFCD25935BC900A02D34 /* Network */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		15FE68CA258E0C0E0082FB3B /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		15FE68CC258E0C2E0082FB3B /* Flows */ = {
@@ -700,7 +739,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1507D88325B59911008DD271 /* GoodsRequestStruct.swift in Sources */,
+				1507D89525B5BCF5008DD271 /* RegisterViewController.swift in Sources */,
 				15A50C2C2591FC3B00C4D9B0 /* ChangeUserData.swift in Sources */,
+				1507D89025B59CE9008DD271 /* LoginViewController.swift in Sources */,
 				15A50C1C2591EB3400C4D9B0 /* AbstractRequestFactory.swift in Sources */,
 				15A50C282591FBE200C4D9B0 /* Register.swift in Sources */,
 				15A50C122591E9FB00C4D9B0 /* LogoutResult.swift in Sources */,
@@ -712,6 +753,7 @@
 				1500410825A8645400EE53ED /* Review.swift in Sources */,
 				1507D88925B59954008DD271 /* ChangeUserDataRequestStruct.swift in Sources */,
 				15A50C202591FAF600C4D9B0 /* RequestFactory.swift in Sources */,
+				1507D89A25B5C44D008DD271 /* CatalogViewController.swift in Sources */,
 				15FE6898258E09ED0082FB3B /* AppDelegate.swift in Sources */,
 				15A50C242591FB5600C4D9B0 /* Auth.swift in Sources */,
 				15FE689A258E09ED0082FB3B /* SceneDelegate.swift in Sources */,
@@ -730,10 +772,12 @@
 				1574C92C25B077CE001A210B /* GetBasketResult.swift in Sources */,
 				1507D88725B5993F008DD271 /* RegisterRequestStruct.swift in Sources */,
 				1574C93425B07971001A210B /* Basket.swift in Sources */,
+				1507D89725B5BD10008DD271 /* RegisterView.swift in Sources */,
 				1574C92E25B0780E001A210B /* RemoveFromBasketResult.swift in Sources */,
 				1500410025A860CF00EE53ED /* AddReviewResult.swift in Sources */,
 				15B18F842595F6D000E62D84 /* CatalogArray.swift in Sources */,
 				1507D88525B59923008DD271 /* AuthRequestStruct.swift in Sources */,
+				1507D89225B59E20008DD271 /* LoginView.swift in Sources */,
 				15A50C0C2591E96F00C4D9B0 /* User.swift in Sources */,
 				15A50C262591FBBE00C4D9B0 /* RegisterRequestFactory.swift in Sources */,
 				15A50C0E2591E9BA00C4D9B0 /* RegisterResult.swift in Sources */,
