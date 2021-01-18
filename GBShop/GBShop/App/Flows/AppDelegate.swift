@@ -57,6 +57,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let goods = requestFactory.makeGoodsRequestFactory()
+        
+        goods.doCatalogList(){ response in
+            switch response.result {
+            case .success(let register):
+                print(register)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        goods.doProduct(){ response in
+            switch response.result {
+            case .success(let register):
+                print(register)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
         return true
     }
 
