@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias CatalogArrayResult = [CatalogResult]
+typealias CatalogArray = [CatalogResult]
 
 struct CatalogResult: Codable {
     let productId: Int

@@ -77,6 +77,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let review = requestFactory.makeReviewRequestFactory()
+        
+        review.doAddReview(userReview: "Хорошая техника"){ response in
+            switch response.result {
+            case .success(let register):
+                print(register)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        review.doApproveReview(){ response in
+            switch response.result {
+            case .success(let register):
+                print(register)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        review.doRemoveReview(){ response in
+            switch response.result {
+            case .success(let register):
+                print(register)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
         return true
     }
 

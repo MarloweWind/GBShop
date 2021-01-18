@@ -43,7 +43,7 @@ class GoodsTest: XCTestCase {
     }
     
     func testGoodsData(){
-        goodsObject.doCatalogList() { [weak self] (response: DataResponse<CatalogArrayResult>) in
+        goodsObject.doCatalogList() { [weak self] (response: DataResponse<CatalogArray>) in
             switch response.result {
             case .success(let productResult):
                 if productResult.count == 0 {
