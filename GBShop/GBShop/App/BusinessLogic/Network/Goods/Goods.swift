@@ -27,22 +27,6 @@ class Goods: AbstractRequestFactory{
     }
 }
 
-extension Goods{
-    struct goodsData: RequestRouter{
-        var baseUrl: URL
-        var method: HTTPMethod = .get
-        var path: String = "catalogData.json"
-        var parameters: Parameters? = nil
-    }
-    
-    struct goodsById: RequestRouter {
-        var baseUrl: URL
-        var method: HTTPMethod = .get
-        var path: String = "getGoodById.json"
-        var parameters: Parameters? = nil
-    }
-}
-
 extension Goods: CatalogRequestFactory{
     
     func doCatalogList(completionHandler: @escaping (DataResponse<CatalogArray>) -> Void) {
