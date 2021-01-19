@@ -23,15 +23,16 @@ class RequestFactory {
     }()
     
     let sessionQueue = DispatchQueue.global(qos: .utility)
+    let queue = DispatchQueue.main
     
     func makeAuthRequestFactory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return Auth(errorParser: errorParser, sessionManager: commonSessionManager, queue: queue)
     }
     
     func makeRegisterRequestFactory() -> RegisterRequestFactory {
         let errorParser = makeErrorParser()
-        return Register(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return Register(errorParser: errorParser, sessionManager: commonSessionManager, queue: queue)
     }
     
     func makeChangeUserDataRequestFactory() -> ChangeUserDataRequestFactory {

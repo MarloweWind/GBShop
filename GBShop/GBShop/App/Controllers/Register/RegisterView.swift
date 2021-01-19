@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol RegisterViewDelegate {
+    func registerPush()
+}
+
 class RegisterView: UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +29,15 @@ class RegisterView: UIView{
     var registerButton: UIButton!
     var nameTextField: UITextField!
     var passwordTextField: UITextField!
+    var fristNameTextField: UITextField!
+    var lastNameTextField: UITextField!
+    var emailTextField: UITextField!
     var registerFAQ: UILabel!
+    
+    
+    var delegate: RegisterViewDelegate?
+    
+    let requestFactory = RequestFactory()
     
     func createSubviews(){
         
@@ -46,15 +58,32 @@ class RegisterView: UIView{
         self.addSubview(nameTextField)
         
         passwordTextField = UITextField(frame: .zero)
-        passwordTextField.placeholder = "Your assword"
-        passwordTextField.isSecureTextEntry = true
+        passwordTextField.placeholder = "Your password"
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(passwordTextField)
         
+        fristNameTextField = UITextField(frame: .zero)
+        fristNameTextField.placeholder = "Your first name"
+        fristNameTextField.borderStyle = .roundedRect
+        fristNameTextField.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(fristNameTextField)
+        
+        lastNameTextField = UITextField(frame: .zero)
+        lastNameTextField.placeholder = "Your last name"
+        lastNameTextField.borderStyle = .roundedRect
+        lastNameTextField.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(lastNameTextField)
+        
+        emailTextField = UITextField(frame: .zero)
+        emailTextField.placeholder = "Your email"
+        emailTextField.borderStyle = .roundedRect
+        emailTextField.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(emailTextField)
+        
         registerFAQ = UILabel()
         registerFAQ.translatesAutoresizingMaskIntoConstraints = false
-        registerFAQ.text = "Enter your login and password to register"
+        registerFAQ.text = "Enter your data to register"
         registerFAQ.textColor = .black
         registerFAQ.font = UIFont.boldSystemFont(ofSize: 20)
         self.addSubview(registerFAQ)
@@ -64,7 +93,7 @@ class RegisterView: UIView{
     func constraintsInit(){
         NSLayoutConstraint.activate([
             registerButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            registerButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            registerButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 500),
             
             passwordTextField.bottomAnchor.constraint(equalTo: registerButton.topAnchor, constant: -20),
             passwordTextField.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor, constant: 20),
@@ -74,21 +103,39 @@ class RegisterView: UIView{
             nameTextField.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor, constant: 20),
             nameTextField.trailingAnchor.constraint(equalTo: self.readableContentGuide.trailingAnchor, constant: -20),
             
-            registerFAQ.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
+            fristNameTextField.bottomAnchor.constraint(equalTo: nameTextField.topAnchor, constant: -20),
+            fristNameTextField.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor, constant: 20),
+            fristNameTextField.trailingAnchor.constraint(equalTo: self.readableContentGuide.trailingAnchor, constant: -20),
+            
+            lastNameTextField.bottomAnchor.constraint(equalTo: fristNameTextField.topAnchor, constant: -20),
+            lastNameTextField.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor, constant: 20),
+            lastNameTextField.trailingAnchor.constraint(equalTo: self.readableContentGuide.trailingAnchor, constant: -20),
+            
+            emailTextField.bottomAnchor.constraint(equalTo: lastNameTextField.topAnchor, constant: -20),
+            emailTextField.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: self.readableContentGuide.trailingAnchor, constant: -20),
+            
+            registerFAQ.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             registerFAQ.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
     }
     
     @objc func handleRegisterTouchUpInseide(){
-        print("Register has beeen tapped")
-        if nameTextField.isFirstResponder{
-            nameTextField.resignFirstResponder()
+        let register = requestFactory.makeRegisterRequestFactory()
+        
+        register.doRegister(login: "nameTextField",
+                            password: "passwordTextField",
+                            firstName: "fristNameTextField",
+                            lastName: "lastNameTextField",
+                            email: "emailTextField") { response in
+                switch response.result {
+            case .success(let register):
+                self.delegate?.registerPush()
+                print(register)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
-        print(nameTextField.text!)
-        if passwordTextField.isFirstResponder{
-            passwordTextField.resignFirstResponder()
-        }
-        print(passwordTextField.text!)
     }
     
 }

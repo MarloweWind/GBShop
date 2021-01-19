@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 protocol LoginViewDelegate {
-    func loginPrefermed()
+    func loginPush()
+    func registerPush()
 }
 
 class LoginView: UIView{
@@ -35,8 +37,8 @@ class LoginView: UIView{
     
     var delegate: LoginViewDelegate?
     
-
-    
+    let requestFactory = RequestFactory()
+        
     func createSubviews(){
         
         backgroundColor = .white
@@ -46,7 +48,7 @@ class LoginView: UIView{
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(loginButton)
         loginButton.addTarget(self,
-                              action: #selector(handleRegisterTouchUpInseide),
+                              action: #selector(handleLoginTouchUpInseide),
                               for: .touchUpInside)
         
         nameTextField = UITextField(frame: .zero)
@@ -96,26 +98,27 @@ class LoginView: UIView{
             registerButton.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor, constant: 20),
             registerButton.trailingAnchor.constraint(equalTo: self.readableContentGuide.trailingAnchor, constant: -20),
             
-            appNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
+            appNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             appNameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
     }
     
     @objc func handleLoginTouchUpInseide(){
-        print("Login has beeen tapped")
-        if nameTextField.isFirstResponder{
-            nameTextField.resignFirstResponder()
+        let auth = requestFactory.makeAuthRequestFactory()
+        
+        auth.login(userName: "nameTextField", password: "passwordTextField") { response in
+            switch response.result {
+            case .success(let login):
+                self.delegate?.registerPush()
+                print(login)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
-        print(nameTextField.text!)
-        if passwordTextField.isFirstResponder{
-            passwordTextField.resignFirstResponder()
-        }
-        print(passwordTextField.text!)
     }
     
     @objc func handleRegisterTouchUpInseide(){
-        
-        delegate?.loginPrefermed()
+        delegate?.loginPush()
     }
     
 }

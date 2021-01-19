@@ -21,12 +21,15 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         super.viewDidLoad()        
     }
     
-    func loginPrefermed() {
-        
+    func loginPush() {
         let vc = RegisterViewController()
-        
         navigationController?.pushViewController(vc, animated: true)
-        
     }
+    
+    func registerPush() {
+        let vc = CatalogViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
 }

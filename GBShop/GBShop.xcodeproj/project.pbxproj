@@ -26,6 +26,7 @@
 		1507D89A25B5C44D008DD271 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D89925B5C44D008DD271 /* CatalogViewController.swift */; };
 		151359A02597359000E0CB81 /* GoodsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513599F2597358F00E0CB81 /* GoodsTest.swift */; };
 		151359A22597387A00E0CB81 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151359A12597387A00E0CB81 /* LoginTest.swift */; };
+		1544316325B6F4DD00A50127 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1544316225B6F4DD00A50127 /* CatalogView.swift */; };
 		1574C92A25B07781001A210B /* AddToBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574C92925B07781001A210B /* AddToBasketResult.swift */; };
 		1574C92C25B077CE001A210B /* GetBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574C92B25B077CE001A210B /* GetBasketResult.swift */; };
 		1574C92E25B0780E001A210B /* RemoveFromBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574C92D25B0780E001A210B /* RemoveFromBasketResult.swift */; };
@@ -102,6 +103,7 @@
 		1507D89925B5C44D008DD271 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		1513599F2597358F00E0CB81 /* GoodsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTest.swift; sourceTree = "<group>"; };
 		151359A12597387A00E0CB81 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		1544316225B6F4DD00A50127 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		1574C92925B07781001A210B /* AddToBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketResult.swift; sourceTree = "<group>"; };
 		1574C92B25B077CE001A210B /* GetBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResult.swift; sourceTree = "<group>"; };
 		1574C92D25B0780E001A210B /* RemoveFromBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveFromBasketResult.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 		1507D89825B5C351008DD271 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				1544316225B6F4DD00A50127 /* CatalogView.swift */,
 				1507D89925B5C44D008DD271 /* CatalogViewController.swift */,
 			);
 			path = Catalog;
@@ -778,6 +781,7 @@
 				15B18F842595F6D000E62D84 /* CatalogArray.swift in Sources */,
 				1507D88525B59923008DD271 /* AuthRequestStruct.swift in Sources */,
 				1507D89225B59E20008DD271 /* LoginView.swift in Sources */,
+				1544316325B6F4DD00A50127 /* CatalogView.swift in Sources */,
 				15A50C0C2591E96F00C4D9B0 /* User.swift in Sources */,
 				15A50C262591FBBE00C4D9B0 /* RegisterRequestFactory.swift in Sources */,
 				15A50C0E2591E9BA00C4D9B0 /* RegisterResult.swift in Sources */,

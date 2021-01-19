@@ -9,6 +9,12 @@
 import UIKit
 
 class CatalogViewController: UIViewController {
+    
+    var catalogView = CatalogView()
+    
+    override func loadView() {
+        view = catalogView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +24,7 @@ class CatalogViewController: UIViewController {
     }
     
     private func configureNavigationController(){
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationItem.largeTitleDisplayMode = .never
     }
 
