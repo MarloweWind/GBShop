@@ -13,6 +13,7 @@ class RegisterViewController: UIViewController, RegisterViewDelegate {
     var registerView = RegisterView()
     
     override func loadView() {
+        registerView.delegate = self
         view = registerView
     }
 
@@ -27,7 +28,7 @@ class RegisterViewController: UIViewController, RegisterViewDelegate {
     }
     
     func registerPush() {
-        navigationController?.dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 
 }

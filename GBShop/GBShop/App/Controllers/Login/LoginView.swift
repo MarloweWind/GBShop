@@ -106,7 +106,7 @@ class LoginView: UIView{
     @objc func handleLoginTouchUpInseide(){
         let auth = requestFactory.makeAuthRequestFactory()
         
-        auth.login(userName: "nameTextField", password: "passwordTextField") { response in
+        auth.login(userName: nameTextField.text!, password: passwordTextField.text!) { response in
             switch response.result {
             case .success(let login):
                 self.delegate?.registerPush()

@@ -31,5 +31,4 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-
 }

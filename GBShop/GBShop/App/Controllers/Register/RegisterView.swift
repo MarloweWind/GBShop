@@ -123,11 +123,11 @@ class RegisterView: UIView{
     @objc func handleRegisterTouchUpInseide(){
         let register = requestFactory.makeRegisterRequestFactory()
         
-        register.doRegister(login: "nameTextField",
-                            password: "passwordTextField",
-                            firstName: "fristNameTextField",
-                            lastName: "lastNameTextField",
-                            email: "emailTextField") { response in
+        register.doRegister(login: nameTextField.text!,
+                            password: passwordTextField.text!,
+                            firstName: fristNameTextField.text!,
+                            lastName: lastNameTextField.text!,
+                            email: emailTextField.text!) { response in
                 switch response.result {
             case .success(let register):
                 self.delegate?.registerPush()
