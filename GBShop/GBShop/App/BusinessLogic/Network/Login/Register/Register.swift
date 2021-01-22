@@ -24,30 +24,6 @@ class Register: AbstractRequestFactory {
     }
 }
 
-extension Register {
-    struct UserData: RequestRouter {
-        let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "registerUser.json"
-        
-        let login: String
-        let password: String
-        let email: String
-        let name: String
-        let lastName: String
-        
-        var parameters: Parameters? {
-            return [
-                "username": login,
-                "password": password,
-                "first_name": name,
-                "last_name": lastName,
-                "email": email
-            ]
-        }
-    }
-}
-
 extension Register: RegisterRequestFactory {
     func doRegister(login: String,
                   password: String,
