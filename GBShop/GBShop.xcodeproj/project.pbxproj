@@ -23,10 +23,8 @@
 		1507D89225B59E20008DD271 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D89125B59E20008DD271 /* LoginView.swift */; };
 		1507D89525B5BCF5008DD271 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D89425B5BCF5008DD271 /* RegisterViewController.swift */; };
 		1507D89725B5BD10008DD271 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D89625B5BD10008DD271 /* RegisterView.swift */; };
-		1507D89A25B5C44D008DD271 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507D89925B5C44D008DD271 /* CatalogViewController.swift */; };
 		151359A02597359000E0CB81 /* GoodsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513599F2597358F00E0CB81 /* GoodsTest.swift */; };
 		151359A22597387A00E0CB81 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151359A12597387A00E0CB81 /* LoginTest.swift */; };
-		1544316325B6F4DD00A50127 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1544316225B6F4DD00A50127 /* CatalogView.swift */; };
 		154CDA5A25B9A18E003DB871 /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154CDA5925B9A18E003DB871 /* CatalogTableViewController.swift */; };
 		1574C92A25B07781001A210B /* AddToBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574C92925B07781001A210B /* AddToBasketResult.swift */; };
 		1574C92C25B077CE001A210B /* GetBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574C92B25B077CE001A210B /* GetBasketResult.swift */; };
@@ -55,6 +53,10 @@
 		15B18F862595F77E00E62D84 /* CatalogRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B18F852595F77E00E62D84 /* CatalogRequestFactory.swift */; };
 		15B18F88259602C500E62D84 /* ProductResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B18F87259602C500E62D84 /* ProductResult.swift */; };
 		15B18F8A2596102600E62D84 /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B18F892596102600E62D84 /* Goods.swift */; };
+		15C603E625BC3C3F00B4FFEE /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C603E525BC3C3F00B4FFEE /* MainMenuViewController.swift */; };
+		15C603E825BC3C6500B4FFEE /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C603E725BC3C6500B4FFEE /* MainMenuView.swift */; };
+		15C603EB25BC429F00B4FFEE /* ChangeUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C603EA25BC429F00B4FFEE /* ChangeUserDataViewController.swift */; };
+		15C603ED25BC42E300B4FFEE /* ChangeUserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C603EC25BC42E300B4FFEE /* ChangeUserDataView.swift */; };
 		15F6323E25B2EF5700C66466 /* BasketTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F6323D25B2EF5700C66466 /* BasketTest.swift */; };
 		15FE6898258E09ED0082FB3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE6897258E09ED0082FB3B /* AppDelegate.swift */; };
 		15FE689A258E09ED0082FB3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE6899258E09ED0082FB3B /* SceneDelegate.swift */; };
@@ -101,10 +103,8 @@
 		1507D89125B59E20008DD271 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1507D89425B5BCF5008DD271 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1507D89625B5BD10008DD271 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		1507D89925B5C44D008DD271 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		1513599F2597358F00E0CB81 /* GoodsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTest.swift; sourceTree = "<group>"; };
 		151359A12597387A00E0CB81 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
-		1544316225B6F4DD00A50127 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		154CDA5925B9A18E003DB871 /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 		1574C92925B07781001A210B /* AddToBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketResult.swift; sourceTree = "<group>"; };
 		1574C92B25B077CE001A210B /* GetBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResult.swift; sourceTree = "<group>"; };
@@ -133,6 +133,10 @@
 		15B18F852595F77E00E62D84 /* CatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRequestFactory.swift; sourceTree = "<group>"; };
 		15B18F87259602C500E62D84 /* ProductResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResult.swift; sourceTree = "<group>"; };
 		15B18F892596102600E62D84 /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
+		15C603E525BC3C3F00B4FFEE /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		15C603E725BC3C6500B4FFEE /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		15C603EA25BC429F00B4FFEE /* ChangeUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataViewController.swift; sourceTree = "<group>"; };
+		15C603EC25BC42E300B4FFEE /* ChangeUserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataView.swift; sourceTree = "<group>"; };
 		15F6323D25B2EF5700C66466 /* BasketTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTest.swift; sourceTree = "<group>"; };
 		15FE6894258E09ED0082FB3B /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FE6897258E09ED0082FB3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				1507D89825B5C351008DD271 /* Catalog */,
+				15C603E425BC3C0600B4FFEE /* MainMenu */,
+				15C603E925BC427800B4FFEE /* ChangeUserData */,
 				1507D89325B5BCD1008DD271 /* Register */,
 				1507D88E25B59CBB008DD271 /* Login */,
 			);
@@ -305,8 +311,6 @@
 		1507D89825B5C351008DD271 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				1544316225B6F4DD00A50127 /* CatalogView.swift */,
-				1507D89925B5C44D008DD271 /* CatalogViewController.swift */,
 				154CDA5925B9A18E003DB871 /* CatalogTableViewController.swift */,
 			);
 			path = Catalog;
@@ -366,6 +370,24 @@
 				1574C93325B07971001A210B /* Basket.swift */,
 			);
 			path = Basket;
+			sourceTree = "<group>";
+		};
+		15C603E425BC3C0600B4FFEE /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				15C603E725BC3C6500B4FFEE /* MainMenuView.swift */,
+				15C603E525BC3C3F00B4FFEE /* MainMenuViewController.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		15C603E925BC427800B4FFEE /* ChangeUserData */ = {
+			isa = PBXGroup;
+			children = (
+				15C603EC25BC42E300B4FFEE /* ChangeUserDataView.swift */,
+				15C603EA25BC429F00B4FFEE /* ChangeUserDataViewController.swift */,
+			);
+			path = ChangeUserData;
 			sourceTree = "<group>";
 		};
 		15FE688B258E09ED0082FB3B = {
@@ -744,6 +766,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C603E625BC3C3F00B4FFEE /* MainMenuViewController.swift in Sources */,
+				15C603ED25BC42E300B4FFEE /* ChangeUserDataView.swift in Sources */,
 				1507D88325B59911008DD271 /* GoodsRequestStruct.swift in Sources */,
 				1507D89525B5BCF5008DD271 /* RegisterViewController.swift in Sources */,
 				15A50C2C2591FC3B00C4D9B0 /* ChangeUserData.swift in Sources */,
@@ -759,7 +783,6 @@
 				1500410825A8645400EE53ED /* Review.swift in Sources */,
 				1507D88925B59954008DD271 /* ChangeUserDataRequestStruct.swift in Sources */,
 				15A50C202591FAF600C4D9B0 /* RequestFactory.swift in Sources */,
-				1507D89A25B5C44D008DD271 /* CatalogViewController.swift in Sources */,
 				15FE6898258E09ED0082FB3B /* AppDelegate.swift in Sources */,
 				15A50C242591FB5600C4D9B0 /* Auth.swift in Sources */,
 				154CDA5A25B9A18E003DB871 /* CatalogTableViewController.swift in Sources */,
@@ -767,6 +790,7 @@
 				15A50C142591EA1100C4D9B0 /* ChangeUserDataResult.swift in Sources */,
 				15A50C182591EADB00C4D9B0 /* ErrorParser.swift in Sources */,
 				15A50C102591E9E200C4D9B0 /* LoginResult.swift in Sources */,
+				15C603EB25BC429F00B4FFEE /* ChangeUserDataViewController.swift in Sources */,
 				15A50C1E2591EB5500C4D9B0 /* RequestRouter.swift in Sources */,
 				1500410425A8610300EE53ED /* RemoveReviewResult.swift in Sources */,
 				15B18F8A2596102600E62D84 /* Goods.swift in Sources */,
@@ -782,10 +806,10 @@
 				1507D89725B5BD10008DD271 /* RegisterView.swift in Sources */,
 				1574C92E25B0780E001A210B /* RemoveFromBasketResult.swift in Sources */,
 				1500410025A860CF00EE53ED /* AddReviewResult.swift in Sources */,
+				15C603E825BC3C6500B4FFEE /* MainMenuView.swift in Sources */,
 				15B18F842595F6D000E62D84 /* CatalogArray.swift in Sources */,
 				1507D88525B59923008DD271 /* AuthRequestStruct.swift in Sources */,
 				1507D89225B59E20008DD271 /* LoginView.swift in Sources */,
-				1544316325B6F4DD00A50127 /* CatalogView.swift in Sources */,
 				15A50C0C2591E96F00C4D9B0 /* User.swift in Sources */,
 				15A50C262591FBBE00C4D9B0 /* RegisterRequestFactory.swift in Sources */,
 				15A50C0E2591E9BA00C4D9B0 /* RegisterResult.swift in Sources */,

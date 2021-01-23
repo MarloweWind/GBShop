@@ -11,22 +11,19 @@ import UIKit
 class CatalogTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var tableView = UITableView()
-    var tableData = ["Beach", "Clubs", "Chill", "Dance"]
     var catalog: [CatalogResult] = []
-    
     let requestFactory = RequestFactory()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
-        // Do any additional setup after loading the view, typically from a nib.
+        navigationController?.navigationBar.isHidden = false
         
         tableView = UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = UIColor.white
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "my")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "catalogCell")
         
         let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
         let displayWidth: CGFloat = self.view.frame.width
@@ -41,11 +38,9 @@ class CatalogTableViewController: UIViewController, UITableViewDelegate, UITable
                                           height: self.tableView.frame.height - self.tableView.contentSize.height))
         
         self.tableView.tableFooterView = footer
-        
-        
+                
         view.addSubview(tableView)
-        
-        
+                
         let goods = requestFactory.makeGoodsRequestFactory()
         
                 goods.doCatalogList(){ response in
@@ -57,12 +52,13 @@ class CatalogTableViewController: UIViewController, UITableViewDelegate, UITable
                         print(error.localizedDescription)
                     }
                 }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "my", for: indexPath)
-        cell.textLabel?.text = catalog[indexPath.row].productName
+        let cell = tableView.dequeueReusableCell(withIdentifier: "catalogCell", for: indexPath)
+        let object = catalog[indexPath.row]
+        cell.textLabel?.text = object.productName
+        cell.detailTextLabel?.text = String(object.productPrice)
         
         return cell
     }
@@ -71,20 +67,4 @@ class CatalogTableViewController: UIViewController, UITableViewDelegate, UITable
         return catalog.count
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-//        showDialog(text: (currentCell.textLabel?.text)!)
-//    }
-//
-//    func showDialog(text : String)
-//    {
-//        let alert = UIAlertController(title: "Alert", message: text, preferredStyle: UIAlertController.Style.alert)
-//        alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
-//    }
-    
-    func setupCatalog(object: CatalogArray){
-        
-    }
 }

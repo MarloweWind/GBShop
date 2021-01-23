@@ -28,7 +28,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     }
     
     func registerPush() {
-        let vc = CatalogTableViewController()
+        let vc = MainMenuViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
