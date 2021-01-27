@@ -47,6 +47,7 @@ class CatalogTableViewController: UIViewController, UITableViewDelegate, UITable
                     switch response.result {
                     case .success(let catalogResult):
                         self.catalog = catalogResult
+                        print(catalogResult)
                         self.tableView.reloadData()
                     case .failure(let error):
                         print(error.localizedDescription)
@@ -65,6 +66,15 @@ class CatalogTableViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return catalog.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = ProductDetailViewController()
+        let object = catalog[indexPath.row]
+        vc.productName = object.productName
+        vc.productPrice = String(object.productPrice)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
