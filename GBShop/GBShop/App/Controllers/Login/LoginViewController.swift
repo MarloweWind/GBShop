@@ -18,7 +18,8 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
     }
     
     func loginPush() {
@@ -27,7 +28,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     }
     
     func registerPush() {
-        let vc = CatalogViewController()
+        let vc = MainMenuViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

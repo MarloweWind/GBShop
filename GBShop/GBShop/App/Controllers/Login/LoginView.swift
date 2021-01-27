@@ -6,7 +6,6 @@
 //  Copyright © 2021 Alexey Malkov. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Alamofire
 

@@ -20,6 +20,7 @@ class RegisterViewController: UIViewController, RegisterViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationController()
+        navigationController?.navigationBar.isHidden = false
     }
     
     private func configureNavigationController(){

@@ -37,22 +37,22 @@ class RequestFactory {
     
     func makeChangeUserDataRequestFactory() -> ChangeUserDataRequestFactory {
         let errorParser = makeErrorParser()
-        return ChangeUserData(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return ChangeUserData(errorParser: errorParser, sessionManager: commonSessionManager, queue: queue)
     }
     
     func makeGoodsRequestFactory() -> CatalogRequestFactory{
         let errorParser = makeErrorParser()
-        return Goods(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return Goods(errorParser: errorParser, sessionManager: commonSessionManager, queue: queue)
     }
     
     func makeReviewRequestFactory() -> ReviewRequestFactory{
         let errorParser = makeErrorParser()
-        return Review(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return Review(errorParser: errorParser, sessionManager: commonSessionManager, queue: queue)
     }
     
     func makeBasketFactory() -> BasketRequestFactory {
         let errorParser = makeErrorParser()
-        return Basket(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return Basket(errorParser: errorParser, sessionManager: commonSessionManager, queue: queue)
     }
     
 }
