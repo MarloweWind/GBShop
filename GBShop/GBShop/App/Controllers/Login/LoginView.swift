@@ -43,7 +43,7 @@ class LoginView: UIView{
         backgroundColor = .white
         
         loginButton = UIButton(type: .system)
-        loginButton.setTitle("Login", for: .normal)
+        loginButton.setTitle("Логин", for: .normal)
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(loginButton)
         loginButton.addTarget(self,
@@ -64,7 +64,7 @@ class LoginView: UIView{
         self.addSubview(passwordTextField)
         
         registerButton = UIButton(type: .system)
-        registerButton.setTitle("Register", for: .normal)
+        registerButton.setTitle("Регистрация", for: .normal)
         registerButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(registerButton)
         registerButton.addTarget(self,

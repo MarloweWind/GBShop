@@ -41,7 +41,7 @@ class MainMenuView: UIView{
         backgroundColor = .white
         
         catalogButton = UIButton(type: .system)
-        catalogButton.setTitle("Catalog", for: .normal)
+        catalogButton.setTitle("Каталог", for: .normal)
         catalogButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(catalogButton)
         catalogButton.addTarget(self,
@@ -49,7 +49,7 @@ class MainMenuView: UIView{
                               for: .touchUpInside)
         
         changeUserDataButton = UIButton(type: .system)
-        changeUserDataButton.setTitle("Change password", for: .normal)
+        changeUserDataButton.setTitle("Изменить пароль", for: .normal)
         changeUserDataButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(changeUserDataButton)
         changeUserDataButton.addTarget(self,
@@ -57,7 +57,7 @@ class MainMenuView: UIView{
                               for: .touchUpInside)
         
         logOutButton = UIButton(type: .system)
-        logOutButton.setTitle("Logout", for: .normal)
+        logOutButton.setTitle("Выйти из аккаунта", for: .normal)
         logOutButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(logOutButton)
         logOutButton.addTarget(self,
