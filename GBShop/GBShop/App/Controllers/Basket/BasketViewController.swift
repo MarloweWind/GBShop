@@ -102,6 +102,11 @@ class BasketViewController: UIViewController {
         
         basket.payOrderBy(sessionId: 123, paySumm: moneyTextFieldInt!) { response in
             print("Pay basket")
+            if moneyTextFieldInt != BasketSession.shared.productPrice{
+                let alert = UIAlertController(title: "", message: "Недостаточно средств", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
             switch response.result {
             case .success(let payBasketResult):
                 print(payBasketResult)
@@ -110,9 +115,6 @@ class BasketViewController: UIViewController {
                 self.present(alert, animated: true)
             case .failure(let error):
                 print(error.localizedDescription)
-                let alert = UIAlertController(title: "", message: "Недостаточно средств", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
-                self.present(alert, animated: true)
             }
         }
     }
