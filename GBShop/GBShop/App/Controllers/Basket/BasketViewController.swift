@@ -100,7 +100,7 @@ class BasketViewController: UIViewController {
         let basket = requestFactory.makeBasketFactory()
         let moneyTextFieldInt: Int? = Int(moneyTextField.text!)
         
-        basket.payOrderBy(sessionId: 123, paySumm: moneyTextFieldInt!) { response in
+        basket.payOrderBy(sessionId: 123, paySumm: 2000) { response in
             print("Pay basket")
             if moneyTextFieldInt != BasketSession.shared.productPrice{
                 let alert = UIAlertController(title: "", message: "Недостаточно средств", preferredStyle: .alert)

@@ -45,6 +45,8 @@ class LoginView: UIView{
         loginButton = UIButton(type: .system)
         loginButton.setTitle("Логин", for: .normal)
         loginButton.translatesAutoresizingMaskIntoConstraints = false
+        loginButton.isAccessibilityElement = true
+        loginButton.accessibilityIdentifier = "LoginButton"
         self.addSubview(loginButton)
         loginButton.addTarget(self,
                               action: #selector(handleLoginTouchUpInseide),
@@ -53,13 +55,17 @@ class LoginView: UIView{
         nameTextField = UITextField(frame: .zero)
         nameTextField.placeholder = "Login"
         nameTextField.borderStyle = .roundedRect
+        nameTextField.isAccessibilityElement = true
+        nameTextField.accessibilityIdentifier = "login"
         nameTextField.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(nameTextField)
         
         passwordTextField = UITextField(frame: .zero)
         passwordTextField.placeholder = "Password"
-        passwordTextField.isSecureTextEntry = true
+//        passwordTextField.isSecureTextEntry = true
         passwordTextField.borderStyle = .roundedRect
+        passwordTextField.isAccessibilityElement = true
+        passwordTextField.accessibilityIdentifier = "password"
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(passwordTextField)
         

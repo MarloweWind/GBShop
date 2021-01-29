@@ -31,6 +31,7 @@ class MainMenuView: UIView{
     var catalogButton: UIButton!
     var changeUserDataButton: UIButton!
     var logOutButton: UIButton!
+    var mainMenuLabel: UILabel!
     
     var delegate: MainMenuViewDelegate?
     
@@ -64,6 +65,15 @@ class MainMenuView: UIView{
                               action: #selector(handleLogOutTouchUpInseide),
                               for: .touchUpInside)
         
+        mainMenuLabel = UILabel()
+        mainMenuLabel.translatesAutoresizingMaskIntoConstraints = false
+        mainMenuLabel.text = "GBShop"
+        mainMenuLabel.isAccessibilityElement = true
+        mainMenuLabel.accessibilityIdentifier = "MainMenu"
+        mainMenuLabel.textColor = .purple
+        mainMenuLabel.font = UIFont.boldSystemFont(ofSize: 50)
+        self.addSubview(mainMenuLabel)
+        
     }
     
     func constraintsInit(){
@@ -78,6 +88,9 @@ class MainMenuView: UIView{
             logOutButton.topAnchor.constraint(equalTo: changeUserDataButton.bottomAnchor, constant: 10),
             logOutButton.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor, constant: 20),
             logOutButton.trailingAnchor.constraint(equalTo: self.readableContentGuide.trailingAnchor, constant: -20),
+            
+            mainMenuLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+            mainMenuLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
             
         ])
     }
