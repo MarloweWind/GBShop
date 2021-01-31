@@ -26,6 +26,10 @@
 		151359A02597359000E0CB81 /* GoodsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513599F2597358F00E0CB81 /* GoodsTest.swift */; };
 		151359A22597387A00E0CB81 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151359A12597387A00E0CB81 /* LoginTest.swift */; };
 		1539A1E725BED1CA002A2DD2 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539A1E625BED1CA002A2DD2 /* ProductDetailViewController.swift */; };
+		1548F4DB25C2CA0B001B6F82 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1548F4DA25C2CA0B001B6F82 /* BasketViewController.swift */; };
+		1548F4E325C2D1B2001B6F82 /* BusketStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1548F4E225C2D1B2001B6F82 /* BusketStruct.swift */; };
+		1548F4E525C2D1D3001B6F82 /* BasketAddList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1548F4E425C2D1D3001B6F82 /* BasketAddList.swift */; };
+		1548F4E725C2D2C9001B6F82 /* BasketSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1548F4E625C2D2C9001B6F82 /* BasketSession.swift */; };
 		154CDA5A25B9A18E003DB871 /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154CDA5925B9A18E003DB871 /* CatalogTableViewController.swift */; };
 		1574C92A25B07781001A210B /* AddToBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574C92925B07781001A210B /* AddToBasketResult.swift */; };
 		1574C92C25B077CE001A210B /* GetBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574C92B25B077CE001A210B /* GetBasketResult.swift */; };
@@ -107,6 +111,10 @@
 		1513599F2597358F00E0CB81 /* GoodsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTest.swift; sourceTree = "<group>"; };
 		151359A12597387A00E0CB81 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
 		1539A1E625BED1CA002A2DD2 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		1548F4DA25C2CA0B001B6F82 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		1548F4E225C2D1B2001B6F82 /* BusketStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusketStruct.swift; sourceTree = "<group>"; };
+		1548F4E425C2D1D3001B6F82 /* BasketAddList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketAddList.swift; sourceTree = "<group>"; };
+		1548F4E625C2D2C9001B6F82 /* BasketSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketSession.swift; sourceTree = "<group>"; };
 		154CDA5925B9A18E003DB871 /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 		1574C92925B07781001A210B /* AddToBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketResult.swift; sourceTree = "<group>"; };
 		1574C92B25B077CE001A210B /* GetBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResult.swift; sourceTree = "<group>"; };
@@ -283,6 +291,7 @@
 		1507D88D25B59CAE008DD271 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1548F4D925C2C9EF001B6F82 /* Basket */,
 				1539A1E525BED192002A2DD2 /* ProductDetail */,
 				1507D89825B5C351008DD271 /* Catalog */,
 				15C603E425BC3C0600B4FFEE /* MainMenu */,
@@ -327,6 +336,14 @@
 			path = ProductDetail;
 			sourceTree = "<group>";
 		};
+		1548F4D925C2C9EF001B6F82 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				1548F4DA25C2CA0B001B6F82 /* BasketViewController.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
 		1558CFCD25935BC900A02D34 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +386,9 @@
 				1574C92B25B077CE001A210B /* GetBasketResult.swift */,
 				1574C92D25B0780E001A210B /* RemoveFromBasketResult.swift */,
 				1574C92F25B0783B001A210B /* PayOrderResult.swift */,
+				1548F4E225C2D1B2001B6F82 /* BusketStruct.swift */,
+				1548F4E425C2D1D3001B6F82 /* BasketAddList.swift */,
+				1548F4E625C2D2C9001B6F82 /* BasketSession.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -777,6 +797,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1548F4DB25C2CA0B001B6F82 /* BasketViewController.swift in Sources */,
 				15C603E625BC3C3F00B4FFEE /* MainMenuViewController.swift in Sources */,
 				15C603ED25BC42E300B4FFEE /* ChangeUserDataView.swift in Sources */,
 				1507D88325B59911008DD271 /* GoodsRequestStruct.swift in Sources */,
@@ -788,9 +809,11 @@
 				15A50C122591E9FB00C4D9B0 /* LogoutResult.swift in Sources */,
 				1500410225A860E900EE53ED /* ApproveReviewResult.swift in Sources */,
 				15A50C1A2591EB0E00C4D9B0 /* ResponseCodable.swift in Sources */,
+				1548F4E325C2D1B2001B6F82 /* BusketStruct.swift in Sources */,
 				15B18F88259602C500E62D84 /* ProductResult.swift in Sources */,
 				1500410625A8629900EE53ED /* ReviewRequestFactory.swift in Sources */,
 				15B18F862595F77E00E62D84 /* CatalogRequestFactory.swift in Sources */,
+				1548F4E725C2D2C9001B6F82 /* BasketSession.swift in Sources */,
 				1500410825A8645400EE53ED /* Review.swift in Sources */,
 				1507D88925B59954008DD271 /* ChangeUserDataRequestStruct.swift in Sources */,
 				15A50C202591FAF600C4D9B0 /* RequestFactory.swift in Sources */,
@@ -802,6 +825,7 @@
 				15A50C182591EADB00C4D9B0 /* ErrorParser.swift in Sources */,
 				15A50C102591E9E200C4D9B0 /* LoginResult.swift in Sources */,
 				15C603EB25BC429F00B4FFEE /* ChangeUserDataViewController.swift in Sources */,
+				1548F4E525C2D1D3001B6F82 /* BasketAddList.swift in Sources */,
 				15A50C1E2591EB5500C4D9B0 /* RequestRouter.swift in Sources */,
 				1500410425A8610300EE53ED /* RemoveReviewResult.swift in Sources */,
 				15B18F8A2596102600E62D84 /* Goods.swift in Sources */,

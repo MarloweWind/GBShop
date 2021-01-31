@@ -18,6 +18,8 @@ class CatalogTableViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = false
         
+        // MARK: setting tableView
+        
         tableView = UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
         tableView.dataSource = self
         tableView.delegate = self
@@ -40,19 +42,31 @@ class CatalogTableViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.tableFooterView = footer
                 
         view.addSubview(tableView)
+        
+        // MARK: loading request
                 
         let goods = requestFactory.makeGoodsRequestFactory()
         
-                goods.doCatalogList(){ response in
-                    switch response.result {
-                    case .success(let catalogResult):
-                        self.catalog = catalogResult
-                        print(catalogResult)
-                        self.tableView.reloadData()
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
+            goods.doCatalogList(){ response in
+                switch response.result {
+                case .success(let catalogResult):
+                    self.catalog = catalogResult
+                    print(catalogResult)
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
+            }
+        
+        // MARK: setting burButton
+        
+        let cartButton = UIBarButtonItem(title: "Корзина", style: UIBarButtonItem.Style.plain, target: self, action: #selector(goToCart))
+        navigationItem.rightBarButtonItem = cartButton
+    }
+    
+    @objc func goToCart(){
+        let vc = BasketViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,6 +88,7 @@ class CatalogTableViewController: UIViewController, UITableViewDelegate, UITable
         let object = catalog[indexPath.row]
         vc.productName = object.productName
         vc.productPrice = String(object.productPrice)
+        vc.productPriceInt = object.productPrice
         navigationController?.pushViewController(vc, animated: true)
     }
     
