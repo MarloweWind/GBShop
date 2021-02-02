@@ -24,6 +24,7 @@ class ChangeUserDataViewController: UIViewController, ChangeUserDataViewDelegate
     
     func backPush() {
         navigationController?.popViewController(animated: true)
+        analytics(state: "Change user data")
     }
 
 }

@@ -62,6 +62,7 @@
 		15C603E825BC3C6500B4FFEE /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C603E725BC3C6500B4FFEE /* MainMenuView.swift */; };
 		15C603EB25BC429F00B4FFEE /* ChangeUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C603EA25BC429F00B4FFEE /* ChangeUserDataViewController.swift */; };
 		15C603ED25BC42E300B4FFEE /* ChangeUserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C603EC25BC42E300B4FFEE /* ChangeUserDataView.swift */; };
+		15ECE34F25C9685F00C99472 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ECE34E25C9685F00C99472 /* Analytics.swift */; };
 		15F6323E25B2EF5700C66466 /* BasketTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F6323D25B2EF5700C66466 /* BasketTest.swift */; };
 		15FE6898258E09ED0082FB3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE6897258E09ED0082FB3B /* AppDelegate.swift */; };
 		15FE689A258E09ED0082FB3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE6899258E09ED0082FB3B /* SceneDelegate.swift */; };
@@ -147,6 +148,7 @@
 		15C603E725BC3C6500B4FFEE /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		15C603EA25BC429F00B4FFEE /* ChangeUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataViewController.swift; sourceTree = "<group>"; };
 		15C603EC25BC42E300B4FFEE /* ChangeUserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataView.swift; sourceTree = "<group>"; };
+		15ECE34E25C9685F00C99472 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		15F6323D25B2EF5700C66466 /* BasketTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTest.swift; sourceTree = "<group>"; };
 		15FE6894258E09ED0082FB3B /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FE6897258E09ED0082FB3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 		1558CFCE25935BD900A02D34 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				15ECE34D25C9683500C99472 /* Analytics */,
 				1574C92825B068B2001A210B /* Basket */,
 				150040FE25A85E1700EE53ED /* Review */,
 				150040FD25A85DF600EE53ED /* Goods */,
@@ -419,6 +422,14 @@
 				15C603EA25BC429F00B4FFEE /* ChangeUserDataViewController.swift */,
 			);
 			path = ChangeUserData;
+			sourceTree = "<group>";
+		};
+		15ECE34D25C9683500C99472 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				15ECE34E25C9685F00C99472 /* Analytics.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		15FE688B258E09ED0082FB3B = {
@@ -845,6 +856,7 @@
 				15B18F842595F6D000E62D84 /* CatalogArray.swift in Sources */,
 				1507D88525B59923008DD271 /* AuthRequestStruct.swift in Sources */,
 				1507D89225B59E20008DD271 /* LoginView.swift in Sources */,
+				15ECE34F25C9685F00C99472 /* Analytics.swift in Sources */,
 				15A50C0C2591E96F00C4D9B0 /* User.swift in Sources */,
 				15A50C262591FBBE00C4D9B0 /* RegisterRequestFactory.swift in Sources */,
 				15A50C0E2591E9BA00C4D9B0 /* RegisterResult.swift in Sources */,

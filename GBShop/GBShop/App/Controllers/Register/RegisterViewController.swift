@@ -30,6 +30,7 @@ class RegisterViewController: UIViewController, RegisterViewDelegate {
     
     func registerPush() {
         navigationController?.popViewController(animated: true)
+        analytics(state: "Register")
     }
 
 }

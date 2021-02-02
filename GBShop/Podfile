@@ -7,6 +7,7 @@ target 'GBShop' do
 
   # Pods for GBShop
   pod 'Alamofire', '~> 4.9.1'
+  pod 'YandexMobileMetrica', '3.14.0'
 
   target 'GBShopTests' do
     inherit! :search_paths
