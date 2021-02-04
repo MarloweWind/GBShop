@@ -1,16 +1,27 @@
 PODS:
   - Alamofire (4.9.1)
+  - YandexMobileMetrica (3.14.0):
+    - YandexMobileMetrica/Static (= 3.14.0)
+  - YandexMobileMetrica/Static (3.14.0):
+    - YandexMobileMetrica/Static/Core (= 3.14.0)
+    - YandexMobileMetrica/Static/Crashes (= 3.14.0)
+  - YandexMobileMetrica/Static/Core (3.14.0)
+  - YandexMobileMetrica/Static/Crashes (3.14.0):
+    - YandexMobileMetrica/Static/Core
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
+  - YandexMobileMetrica (= 3.14.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - YandexMobileMetrica
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  YandexMobileMetrica: a2dd4fd2f01ae7ae6850d786c443cb41fbbbea78
 
-PODFILE CHECKSUM: 63031f030967a26ff93ee6831f2eea5be7bf4e45
+PODFILE CHECKSUM: b8df2b30fa7452dd37dfbe6bdef3a98148a08a2e
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

@@ -62,6 +62,7 @@ class CatalogTableViewController: UIViewController, UITableViewDelegate, UITable
         
         let cartButton = UIBarButtonItem(title: "Корзина", style: UIBarButtonItem.Style.plain, target: self, action: #selector(goToCart))
         navigationItem.rightBarButtonItem = cartButton
+        analytics(state: "Catalog")
     }
     
     @objc func goToCart(){

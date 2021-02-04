@@ -58,7 +58,7 @@ class ProductDetailViewController: UIViewController {
         
         constraintsInit()
         getReview()
-        
+        analytics(state: "Catalog")        
     }
     
     func constraintsInit(){
@@ -87,6 +87,7 @@ class ProductDetailViewController: UIViewController {
             case .success(let register):
                 print(register)
                 self.productReviewLabel.text = "Хороший выбор"
+                analytics(state: "Review added")
             case .failure(let error):
                 print(error.localizedDescription)
                 self.productReviewLabel.text = "Техника низкого качества"

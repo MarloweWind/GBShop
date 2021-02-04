@@ -72,7 +72,7 @@ class BasketViewController: UIViewController {
         }
         
         constraintsInit()
-        
+        analytics(state: "Basket loaded")
     }
     
     func constraintsInit(){
@@ -106,6 +106,7 @@ class BasketViewController: UIViewController {
                 let alert = UIAlertController(title: "", message: "Недостаточно средств", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
                 self.present(alert, animated: true)
+                analytics(state: "Basket paided")
             }
             switch response.result {
             case .success(let payBasketResult):
@@ -135,6 +136,7 @@ class BasketViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+        analytics(state: "Basket cleared")
     }
 
 }
