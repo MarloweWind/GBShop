@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='GBShopTests.xctest' tests='13' failures='1'>
+  <testsuite name='GBShopUITests.GBShopUITests' tests='2' failures='1'>
+    <testcase classname='GBShopUITests.GBShopUITests' name='testAccessibleSuccess'>
+      <failure message='XCTAssertTrue failed'>GBShopUITests.swift:41</failure>
+    </testcase>
+    <testcase classname='GBShopUITests.GBShopUITests' name='testLaunchPerformance' time='24.670'/>
+  </testsuite>
+  <testsuite name='GBShopTests.BasketTests' tests='4' failures='0'>
+    <testcase classname='GBShopTests.BasketTests' name='testAddToBasket' time='0.383'/>
+    <testcase classname='GBShopTests.BasketTests' name='testGetBasket' time='0.310'/>
+    <testcase classname='GBShopTests.BasketTests' name='testPayOrder' time='5.605'/>
+    <testcase classname='GBShopTests.BasketTests' name='testRemoveFromBasket' time='0.309'/>
+  </testsuite>
+  <testsuite name='GBShopTests.GoodsTest' tests='2' failures='0'>
+    <testcase classname='GBShopTests.GoodsTest' name='testGoodsById' time='0.330'/>
+    <testcase classname='GBShopTests.GoodsTest' name='testGoodsData' time='0.320'/>
+  </testsuite>
+  <testsuite name='GBShopTests.LoginTest' tests='2' failures='0'>
+    <testcase classname='GBShopTests.LoginTest' name='testLogin' time='0.172'/>
+    <testcase classname='GBShopTests.LoginTest' name='testLogout' time='0.325'/>
+  </testsuite>
+  <testsuite name='GBShopTests.ReviewTest' tests='3' failures='0'>
+    <testcase classname='GBShopTests.ReviewTest' name='testAddReview' time='0.314'/>
+    <testcase classname='GBShopTests.ReviewTest' name='testApproveReview' time='0.330'/>
+    <testcase classname='GBShopTests.ReviewTest' name='testRemoveReview' time='0.342'/>
+  </testsuite>
+</testsuites>
