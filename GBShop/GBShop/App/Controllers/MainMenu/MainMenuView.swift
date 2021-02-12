@@ -31,6 +31,7 @@ class MainMenuView: UIView{
     var catalogButton: UIButton!
     var changeUserDataButton: UIButton!
     var logOutButton: UIButton!
+    var mainMenuLabel: UILabel!
     
     var delegate: MainMenuViewDelegate?
     
@@ -41,7 +42,7 @@ class MainMenuView: UIView{
         backgroundColor = .white
         
         catalogButton = UIButton(type: .system)
-        catalogButton.setTitle("Catalog", for: .normal)
+        catalogButton.setTitle("Каталог", for: .normal)
         catalogButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(catalogButton)
         catalogButton.addTarget(self,
@@ -49,7 +50,7 @@ class MainMenuView: UIView{
                               for: .touchUpInside)
         
         changeUserDataButton = UIButton(type: .system)
-        changeUserDataButton.setTitle("Change password", for: .normal)
+        changeUserDataButton.setTitle("Изменить пароль", for: .normal)
         changeUserDataButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(changeUserDataButton)
         changeUserDataButton.addTarget(self,
@@ -57,12 +58,21 @@ class MainMenuView: UIView{
                               for: .touchUpInside)
         
         logOutButton = UIButton(type: .system)
-        logOutButton.setTitle("Logout", for: .normal)
+        logOutButton.setTitle("Выйти из аккаунта", for: .normal)
         logOutButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(logOutButton)
         logOutButton.addTarget(self,
                               action: #selector(handleLogOutTouchUpInseide),
                               for: .touchUpInside)
+        
+        mainMenuLabel = UILabel()
+        mainMenuLabel.translatesAutoresizingMaskIntoConstraints = false
+        mainMenuLabel.text = "GBShop"
+        mainMenuLabel.isAccessibilityElement = true
+        mainMenuLabel.accessibilityIdentifier = "MainMenu"
+        mainMenuLabel.textColor = .purple
+        mainMenuLabel.font = UIFont.boldSystemFont(ofSize: 50)
+        self.addSubview(mainMenuLabel)
         
     }
     
@@ -78,6 +88,9 @@ class MainMenuView: UIView{
             logOutButton.topAnchor.constraint(equalTo: changeUserDataButton.bottomAnchor, constant: 10),
             logOutButton.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor, constant: 20),
             logOutButton.trailingAnchor.constraint(equalTo: self.readableContentGuide.trailingAnchor, constant: -20),
+            
+            mainMenuLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+            mainMenuLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
             
         ])
     }

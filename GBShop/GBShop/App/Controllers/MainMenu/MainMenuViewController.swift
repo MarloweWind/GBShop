@@ -20,7 +20,10 @@ class MainMenuViewController: UIViewController, MainMenuViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.isAccessibilityElement = true
+        navigationController?.navigationBar.accessibilityIdentifier = "mainmenu"
+        analytics(state: "Login")
     }
     
     func catalogPush() {
@@ -35,6 +38,7 @@ class MainMenuViewController: UIViewController, MainMenuViewDelegate {
     
     func logOutPush() {
         navigationController?.popViewController(animated: true)
+        analytics(state: "Logout")
     }
 
 }
